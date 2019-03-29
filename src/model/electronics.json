@@ -1,0 +1,38 @@
+[
+    { 
+        "name" : "Apple iPhone 8 Plus",
+        "ram" : "256 GB ROM ",
+        "display" : "13.97 cm (5.5 inch) Retina HD Display",
+        "camera" : "12MP + 12MP | 7MP Front Camera",
+        "battery" : "3000 mAh Battery",
+        "processor" : "A11 Bionic Chip with 64-bit Architecture",
+        "price" : "79,999",
+        "quantity" : 0,
+        "seller" : "Apple store-USA",
+        "image" : "https://rukminim1.flixcart.com/image/832/832/j7ksia80/mobile/t/4/f/apple-iphone-8-plus-mq8g2hn-a-original-imaexsfhxepbngdq.jpeg?q=70"
+    },
+    { 
+        "name" : "Apple iPhone 7 Plus",
+        "ram" : "32 GB ROM",
+        "display" : "13.97 cm (5.5 inch) Retina HD Display",
+        "camera" : "12MP + 12MP | 7MP Front Camera",
+        "battery" : "3000 mAh Battery",
+        "processor" : "Apple A10 Fusion 64-bit processor",
+        "price" : "10,499",
+        "quantity" : 0,
+        "seller" : "Apple store-USA",
+        "image" : "https://rukminim1.flixcart.com/image/832/832/mobile/f/q/h/apple-iphone-7-plus-na-original-imaemz66zzbftnnt.jpeg?q=70"
+    },
+    { 
+        "name" : "Apple iPhone XR",
+        "ram" : "128 GB ROM",
+        "display" : "15.49 cm (6.1 inch) Display",
+        "camera" : "12MP Rear Camera | 7MP Front Camera",
+        "battery" : "3000 mAh Battery",
+        "processor" : "A12 Bionic Chip Processor",
+        "price" : "69,999",
+        "quantity" : 0,
+        "seller" : "Apple store-USA",
+        "image" : "https://rukminim1.flixcart.com/image/832/832/jnj7iq80/mobile/r/k/h/apple-iphone-xr-mrya2hn-a-original-imafa6zkgrdrpuby.jpeg?q=70"
+    }
+]
