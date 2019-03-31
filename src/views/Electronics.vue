@@ -12,35 +12,46 @@
                 <p>{{ item.ram }}</p>
                 <p>{{ item.display }}</p>
                 <p @click="itemClicked(item)">more...</p>
-                <button class="btn btn-primary" @click="addItem(item)">Add To Cart</button>&nbsp;
-                <button class="btn btn-primary" @click="addItem(item)">Buy Now</button>
+                <button class="btn btn-success" @click="addItem(item)">
+                  <i class="fas fa-cart-plus" title="Add To Cart"></i>
+                  </button>&nbsp;
+                <button class="btn btn-primary" @click="addItem(item, true)">
+                  <i class="fas fa-money-bill-wave" title="Buy Now"></i>
+                </button>
             </div>
       </div>
       <!--Modal -->
       <div id="my-modal" class="modal fade">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <ElectronicsMore :itemData=itemData></ElectronicsMore>
+      <!-- <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title"><p> In progress, you can expect in V-1.1</p></h5>
+          <h5 class="modal-title"><p> {{ itemData.name }} Info</p></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <p>Name: {{ itemData.name }}</p>
+          <ElectronicsMore :itemData=itemData></ElectronicsMore>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <i class="fas fa-times-circle" title="Close"></i>
+          </button>
+          <button type="button" class="btn btn-primary" @click="addItem(itemData)">
+            <i class="fas fa-cart-plus" title="Add To Cart"></i>
+          </button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   </div>
 </template>
 <script>
 import { mapState, mapMutations, mapActions } from 'vuex'
+import ElectronicsMore from './electronics/Electronics-More.vue'
 import ElectronicsDBData from '../model/electronics.json'
+
 var currencyFormatter = require('currency-formatter')
 export default {
     data(){
@@ -49,9 +60,15 @@ export default {
             itemData: ""
         }
     },
+    components: {
+      ElectronicsMore
+    },
     methods : {
-        addItem(item){
+        addItem(item, nav){
             this.ADD_ITEM(item)
+            if(nav){
+              this.$router.push('/cart')
+            }
         },
         ...mapMutations([
             'ADD_ITEM'

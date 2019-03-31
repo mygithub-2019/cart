@@ -3,7 +3,7 @@
     <!-- Custom Component-->
     <Carousel></Carousel>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href=""><i>S-Cart</i></a>
+  <a class="navbar-brand" href=""><i>Your-Cart</i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,9 +44,8 @@
       </li>
       <li>
         <router-link class="nav-link" to="/cart">
-          <i class="fa fa-shopping-cart" aria-hidden="true">
-            <sup v-show="getCartItems.length > 0"><span class="badge badge-success">{{ getCartItems.length }}</span></sup>
-          </i>
+          <i class="fas fa-shopping-cart"></i>
+          <sup v-show="getCartItems.length > 0"><span class="badge badge-danger">{{ getCartItems.length }}</span></sup>
         </router-link>
       </li>
     </ul>

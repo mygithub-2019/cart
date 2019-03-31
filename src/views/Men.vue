@@ -1,5 +1,18 @@
 <template>
   <div class="contact">
-    <h1>This is an men page</h1>
-  </div>
+    <MenSectionComponent></MenSectionComponent>
+</div>
+
 </template>
+<script>
+import MenSectionComponent from './men/Men-Section-Comp.vue'
+export default {
+  components: {
+    MenSectionComponent
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
