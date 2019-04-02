@@ -67,28 +67,12 @@
             </div>
             <div class="col-sm-6 float-left">
               <div>
-              <p class="float-left">PRICE DETAILS</p><br>
+              <p class="float-left">PRICE DETAILS</p>
+              <button class="btn btn-secondary" @click="continueShopping()">Continue Shopping</button>
+              <button class="btn btn-secondary float-right" @click="placeOrder()">Place Order</button>
+              <br>
               <hr>
               <PaymentInfo :cartItems=getCartItems></PaymentInfo>
-              <!-- <div v-for="(item, index) in getCartItems" v-bind:key=index>
-                <div class="col-sm-6 float-left">
-                  {{index + 1}}. {{item.name}}
-                </div>
-                <div class="col-sm-6 float-left">
-                  {{item.quantity}} X {{ item.price }} = {{ getTotalAmount(item.quantity, item.price) }}
-                </div>
-                <span><span class="float-left">{{index + 1}}. {{item.name}}</span>
-                  <p>{{item.quantity}} X {{ item.price }} = {{ getTotalAmount(item.quantity, item.price) }}</p>
-                </span>
-              </div> -->
-              <!-- <hr>
-
-              <div class="col-sm-6 float-left">
-                  Total Cart Amount: 
-                </div>
-                <div class="col-sm-6 float-left">
-                  {{ getCartTotalAmount(getCartItems) }}
-                </div> -->
             </div>
             </div>
         </div>
@@ -130,6 +114,12 @@ export default {
     ]),
     removeItem(index){
       this.removeItemAction(index)
+    },
+    continueShopping(){
+      this.$router.push('/electronics')
+    },
+    placeOrder(){
+      this.$router.push('/place-order')
     }
   }
 }

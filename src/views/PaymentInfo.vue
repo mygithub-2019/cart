@@ -5,7 +5,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Qty</th>
+                    <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
                 </tr>
             </thead>

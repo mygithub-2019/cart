@@ -9,6 +9,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "currency-formatter": "^1.5.3",
     "express": "^4.16.4",
     "vue": "^2.6.6",

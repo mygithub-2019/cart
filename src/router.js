@@ -64,9 +64,19 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Cart.vue')
     },
     {
+      path: '/place-order',
+      name: 'place-order',
+      component: () => import('./views/PlaceOrder.vue')
+    },
+    {
+      path: '/registration',
+      name: 'registration',
+      component: () => import('./views/Registration.vue')
+    },
+    {
       path: '*',
       name: 'none',
-      redirect: { name: 'electronics' }
+      redirect: { name: 'login' }
     }
   ]
 })
