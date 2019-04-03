@@ -9,21 +9,30 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
+      <div>
       <img src="../assets/images/icon1.png" alt="Los Angeles" width="500" height="300">
+      </div>
+      <br><br><br><br>
       <div class="carousel-caption">
         <h3>Los Angeles</h3>
         <p>We had such a great time in LA!</p>
       </div>   
     </div>
     <div class="carousel-item">
+      <div>
       <img src="../assets/images/icon1.png" alt="Chicago" width="500" height="300">
+      </div>
+      <br><br><br><br>
       <div class="carousel-caption">
         <h3>Chicago</h3>
         <p>Thank you, Chicago!</p>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="../assets/images/icon1.png" alt="New York" width="500" height="300">
+      <div>
+        <img src="../assets/images/icon1.png" alt="New York" width="500" height="300">
+      </div>
+      <br><br><br><br>
       <div class="carousel-caption">
         <h3>New York</h3>
         <p>We love the Big Apple!</p>

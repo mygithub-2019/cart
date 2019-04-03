@@ -95,7 +95,10 @@
             </div>
             <div class="col-12"><br>
                 <button type="button" class="btn btn-success"
-                @click="placeOrder">Place Order</button>
+                @click="placeOrder">Place Order</button><br>
+                <div v-if="isOrderPlaced">
+                    <app-loader/>
+                </div>
             </div>
         </div>
         </div>
@@ -106,14 +109,20 @@
 </template>
 
 <script>
+import axios from 'axios'
+import Loader from './Loader.vue'
 export default {
     data(){
         return{
+            isOrderPlaced: false,
             orderInfo: {
+                user:this.$store.getters['getCurrentUser'],
+                items: this.$store.getters['getCartItems'],
+                orderDate: new Date(),
                 personlaInfo: {
                     fname: '',
                     lname: '',
-                    email:'',
+                    email:this.$store.getters['getCurrentUser'],
                     phone:''
                 },
                 addressInfo:{
@@ -130,9 +139,24 @@ export default {
             }
         }
     },
+    components: {
+        appLoader: Loader
+    },
     methods: {
         placeOrder(){
+            this.isOrderPlaced = true
             console.log(this.orderInfo)
+            axios.post('https://cart-orders.firebaseio.com/orders.json', this.orderInfo)
+            .then(response => {
+                console.log(response)
+                this.isOrderPlaced = false
+                //this.isFormSubmitted = false
+                //this.$router.push('/my-orders')
+                alert('Order placed successfully.')
+            })
+            .catch(e => {
+                alert(e)
+            })
         }
     }
 }

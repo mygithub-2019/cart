@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     isUserAuthenticated: false,
     cartItems: [],
-    isCartEmpty: true
+    isCartEmpty: true,
+    currentUser: ''
   },
   mutations: {
     IS_USER_AUTHENTICATED: (state, payload) => {
@@ -16,6 +17,9 @@ export default new Vuex.Store({
     },
     IS_USER_LOGGOUT: (state, payload) => {
       state.isUserAuthenticated = payload
+    },
+    SET_CURRENT_USER: (state, payload) => {
+      state.currentUser = payload
     },
     ADD_ITEM: (state, payload) => {
       if(state.isCartEmpty){
@@ -55,6 +59,10 @@ export default new Vuex.Store({
     },
     getCartEmptyStatus(state){
       return state.isCartEmpty
+    },
+    //Get current user info
+    getCurrentUser(state){
+      return state.currentUser.username
     }
   },
   actions: {

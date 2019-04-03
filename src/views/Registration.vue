@@ -21,20 +21,13 @@
       </div>
     </form>
     <div id='loader' v-if="isFormSubmitted">
-        <div class="spinner-grow text-muted"></div>
-        <div class="spinner-grow text-primary"></div>
-        <div class="spinner-grow text-success"></div>
-        <div class="spinner-grow text-info"></div>
-        <div class="spinner-grow text-warning"></div>
-        <div class="spinner-grow text-danger"></div>
-        <div class="spinner-grow text-secondary"></div>
-        <div class="spinner-grow text-dark"></div>
-        <div class="spinner-grow text-light"></div>
+        <app-loader/>
     </div>
   </div>
 </template>
 <script>
 import axios from 'axios'
+import Loader from './Loader.vue'
 export default {
     data(){
         return{
@@ -45,6 +38,9 @@ export default {
                 cpassword:''
             }   
         }
+    },
+    components: {
+        appLoader: Loader
     },
     methods : {
         register(){

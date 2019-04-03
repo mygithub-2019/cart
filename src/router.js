@@ -74,6 +74,11 @@ export default new Router({
       component: () => import('./views/Registration.vue')
     },
     {
+      path: '/my-orders',
+      name: 'myOrders',
+      component: () => import('./views/MyOrders.vue')
+    },
+    {
       path: '*',
       name: 'none',
       redirect: { name: 'login' }

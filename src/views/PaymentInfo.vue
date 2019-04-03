@@ -3,7 +3,7 @@
         <table class="table table-borderless">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">S No</th>
                     <th scope="col">Name</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
@@ -39,11 +39,13 @@ export default {
             return currencyFormatter.format(totalAmount, { code: 'USD' });
         },
         getCartTotalAmount(data){
-            let amount = 0
-            for(let i = 0; i < data.length; i++){
-                amount += data[i].price * data[i].quantity
-            }
-            return currencyFormatter.format(amount, { code: 'USD' })
+            //if(data){
+                let amount = 0
+                for(let i = 0; i < data.length; i++){
+                    amount += data[i].price * data[i].quantity
+                }
+                return currencyFormatter.format(amount, { code: 'USD' })
+            //}
         }
     }
 }

@@ -42,6 +42,9 @@
       <li class="nav-item" v-if="getIsUserAuthenticated">
         <a class="nav-link" @click="logout">Logout</a>
       </li>
+      <li class="nav-item" v-if="getIsUserAuthenticated">
+        <a class="nav-link" @click="showOrders">My Orders</a>
+      </li>
       <li>
         <router-link class="nav-link" to="/cart">
           <i class="fas fa-shopping-cart"></i>
@@ -73,10 +76,14 @@ export default {
     ...mapMutations([
       'IS_USER_AUTHENTICATED'
     ]),
+    showOrders(){
+      this.$router.push('/my-orders')
+    },
     logout(){
       this.IS_USER_AUTHENTICATED('false')
+      this.$router.push('/login')
+      localStorage.removeItem('orders')
       window.location.reload()
-      this.$router.push('/electronics')
     }
   },
   props: {
