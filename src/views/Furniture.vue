@@ -1,5 +1,14 @@
 <template>
-  <div class="about">
-    <h1>This is an furniture page</h1>
+  <div class="contact">
+    <UnderConstruction></UnderConstruction>
   </div>
 </template>
+
+<script>
+import UnderConstruction from './UnderConstruction.vue'
+export default {
+  components: {
+     UnderConstruction
+  }
+}
+</script>
