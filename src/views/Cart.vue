@@ -4,7 +4,8 @@
         <div v-show='getCartEmptyStatus'>
           <img src='../assets/images/emptycart.png' 
           alt="Cart is empty...!"
-          width="350px" height="350px"/>
+          width="350px" height="350px"
+          class="emptyCart"/>
           <p><a href="/electronics">Click here and do shopping...</a></p>
         </div>
         <div class="col-sm-12 float-right"  v-show='!getCartEmptyStatus'>
@@ -129,5 +130,9 @@ export default {
     height: 166px;
     width: 80px;
     margin: 7px;
+}
+.emptyCart {
+  width: 300px;
+  height: 250px;
 }
 </style>

@@ -149,6 +149,7 @@ export default {
             axios.post('https://cart-orders.firebaseio.com/orders.json', this.orderInfo)
             .then(response => {
                 console.log(response)
+                debugger
                 this.isOrderPlaced = false
                 //this.isFormSubmitted = false
                 //this.$router.push('/my-orders')
